@@ -1,0 +1,6 @@
+framework module Pods_LearnSnapKitUITests {
+  umbrella header "Pods-LearnSnapKitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
