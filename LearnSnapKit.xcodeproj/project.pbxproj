@@ -21,6 +21,7 @@
 		D74C785420DBD7F400F2FFCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74C785220DBD7F400F2FFCA /* LaunchScreen.storyboard */; };
 		D74C785F20DBD7F400F2FFCA /* LearnSnapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C785E20DBD7F400F2FFCA /* LearnSnapKitTests.swift */; };
 		D74C786A20DBD7F400F2FFCA /* LearnSnapKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C786920DBD7F400F2FFCA /* LearnSnapKitUITests.swift */; };
+		D7A49E92234E484E00DF4E3E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A49E91234E484E00DF4E3E /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D74C786520DBD7F400F2FFCA /* LearnSnapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnSnapKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74C786920DBD7F400F2FFCA /* LearnSnapKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSnapKitUITests.swift; sourceTree = "<group>"; };
 		D74C786B20DBD7F400F2FFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7A49E91234E484E00DF4E3E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D9577E7172C7355DF2A72FA9 /* Pods-LearnSnapKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnSnapKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnSnapKitUITests/Pods-LearnSnapKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF189966292BEFCFC3EAF206 /* Pods-LearnSnapKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnSnapKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnSnapKitUITests/Pods-LearnSnapKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,15 +135,15 @@
 			isa = PBXGroup;
 			children = (
 				D74C784620DBD7F400F2FFCA /* AppDelegate.swift */,
-				D73C2FBF22FD90590047AF17 /* MainView.swift */,
-				D74C784820DBD7F400F2FFCA /* MainController.swift */,
+				D7A49E96234E802600DF4E3E /* Cell */,
+				D7A49E95234E801100DF4E3E /* Model */,
+				D7A49E94234E800C00DF4E3E /* View */,
+				D7A49E93234E800400DF4E3E /* Controller */,
 				D74C784A20DBD7F400F2FFCA /* Main.storyboard */,
 				D74C785020DBD7F400F2FFCA /* Assets.xcassets */,
 				D74C785220DBD7F400F2FFCA /* LaunchScreen.storyboard */,
 				D74C785520DBD7F400F2FFCA /* Info.plist */,
 				D74C784D20DBD7F400F2FFCA /* LearnSnapKit.xcdatamodeld */,
-				D73C2FC122FD93BC0047AF17 /* SecondControllerViewController.swift */,
-				D73C2FC322FD948B0047AF17 /* SecondView.swift */,
 			);
 			path = LearnSnapKit;
 			sourceTree = "<group>";
@@ -162,6 +164,39 @@
 				D74C786B20DBD7F400F2FFCA /* Info.plist */,
 			);
 			path = LearnSnapKitUITests;
+			sourceTree = "<group>";
+		};
+		D7A49E93234E800400DF4E3E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D74C784820DBD7F400F2FFCA /* MainController.swift */,
+				D73C2FC122FD93BC0047AF17 /* SecondControllerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7A49E94234E800C00DF4E3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D73C2FBF22FD90590047AF17 /* MainView.swift */,
+				D73C2FC322FD948B0047AF17 /* SecondView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7A49E95234E801100DF4E3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7A49E96234E802600DF4E3E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D7A49E91234E484E00DF4E3E /* TableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E11498EF2C51884170397C2A /* Pods */ = {
@@ -188,7 +223,7 @@
 				D74C783F20DBD7F400F2FFCA /* Sources */,
 				D74C784020DBD7F400F2FFCA /* Frameworks */,
 				D74C784120DBD7F400F2FFCA /* Resources */,
-				86343CBC6E3DB1C824417EA2 /* [CP] Embed Pods Frameworks */,
+				E2D24E80816ED8B1682EFED8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,20 +279,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Aji Saputra Raka Siwi";
 				TargetAttributes = {
 					D74C784220DBD7F400F2FFCA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 					D74C785920DBD7F400F2FFCA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D74C784220DBD7F400F2FFCA;
 					};
 					D74C786420DBD7F400F2FFCA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D74C784220DBD7F400F2FFCA;
 					};
@@ -329,24 +367,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		86343CBC6E3DB1C824417EA2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LearnSnapKit/Pods-LearnSnapKit-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearnSnapKit/Pods-LearnSnapKit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AC49928E551896CC72F3E4A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +383,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D24E80816ED8B1682EFED8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnSnapKit/Pods-LearnSnapKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnSnapKit/Pods-LearnSnapKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE98ED44FB8D69F170E8544B /* [CP] Check Pods Manifest.lock */ = {
@@ -395,6 +433,7 @@
 				D73C2FC022FD90590047AF17 /* MainView.swift in Sources */,
 				D73C2FC222FD93BC0047AF17 /* SecondControllerViewController.swift in Sources */,
 				D74C784720DBD7F400F2FFCA /* AppDelegate.swift in Sources */,
+				D7A49E92234E484E00DF4E3E /* TableViewCell.swift in Sources */,
 				D74C784F20DBD7F400F2FFCA /* LearnSnapKit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +503,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -471,6 +511,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -521,6 +562,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -528,6 +570,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -568,7 +611,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajisaputrars.LearnSnapKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -584,7 +627,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajisaputrars.LearnSnapKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -601,7 +644,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajisaputrars.LearnSnapKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnSnapKit.app/LearnSnapKit";
 			};
@@ -619,7 +662,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajisaputrars.LearnSnapKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnSnapKit.app/LearnSnapKit";
 			};
@@ -636,7 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajisaputrars.LearnSnapKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LearnSnapKit;
 			};
@@ -653,7 +696,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajisaputrars.LearnSnapKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LearnSnapKit;
 			};

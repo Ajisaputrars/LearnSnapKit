@@ -3,8 +3,8 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'LearnSnapKit' do
-  pod 'SnapKit', '~> 4.0.0'
-
+  # pod 'SnapKit'
+  pod 'SnapKit', '~> 5.0.0'
 
   # Pods for LearnSnapKit
 

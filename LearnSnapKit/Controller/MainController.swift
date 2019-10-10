@@ -15,13 +15,16 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        mainView = view as! MainView
+        mainView = view as? MainView
+        setupNavigationBar()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupNavigationBar(){
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.isTranslucent = false
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: nil, action: nil)
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
